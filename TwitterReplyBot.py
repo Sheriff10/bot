@@ -74,8 +74,8 @@ stream = MyStream(bearer_token=bearer_token)
 # to change them, or you can use the optional parameter to stream.add_rules()
 # called dry_run (set it to True, and the rules will get deleted after the bot
 # stopped running).
-# for term in search_terms:
-#     stream.add_rules(tweepy.StreamRule(term))
+for term in search_terms:
+    stream.add_rules(tweepy.StreamRule(term))
 
 # Starting stream
 stream.filter(tweet_fields=["referenced_tweets"])
